@@ -227,7 +227,8 @@ footer p + p{margin-top:8px}
   .sheet ul.ing2{columns:1}
   .sheet{padding:22px}
   .btn{width:100%;padding:18px 16px;font-size:15px;letter-spacing:0}
-  .sticky{display:flex}
+  .sticky{display:flex;transform:translateY(110%);transition:transform .3s}
+  .sticky.on{transform:none}
   footer{padding-bottom:110px}
   .book{left:-8px;bottom:-22px}
   .gallery{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:32px}
@@ -251,7 +252,6 @@ footer p + p{margin-top:8px}
   <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
-<div class="topbar">Ebook digital em PDF · <b>acesso imediato</b> no seu e-mail</div>
 
 <header class="hero">
   <div class="wrap hero-grid">
@@ -263,9 +263,9 @@ footer p + p{margin-top:8px}
         <span><b>50</b> sabores de geladinho</span>
       </div>
       <div>
-        <a class="btn" href="#galeria">Quero conhecer as 100 receitas <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn" href="#oferta">Quero as 100 receitas por R$&nbsp;17,90 <svg><use href="#i-arrow"/></svg></a>
         <div class="trust">
-          <span><svg><use href="#i-check"/></svg>Ebook em PDF</span>
+          <span><svg><use href="#i-check"/></svg>Pix ou cartão</span>
           <span><svg><use href="#i-check"/></svg>Acesso imediato</span>
           <span><svg><use href="#i-check"/></svg>Garantia de 7 dias</span>
         </div>
@@ -348,44 +348,9 @@ footer p + p{margin-top:8px}
         <div><small>Bônus 3</small><b>Guia "Cara de Loja"</b><p>Como deixar garrafinhas e geladinhos com aparência profissional gastando pouco: acabamento, embalagem, etiqueta e foto.</p></div>
       </div>
       </div>
-    <div class="ben">
-      <div><i></i><b>Medidas e rendimento</b><p>Quantidades exatas e quantas unidades cada receita rende, para comprar só o necessário.</p></div>
-      <div><i></i><b>Preparo simples</b><p>Poucos passos, com liquidificador e ingredientes que você encontra no mercado.</p></div>
-      <div><i></i><b>Higiene e conservação</b><p>Guia com os cuidados de preparo, armazenamento e temperatura de cada produto.</p></div>
-      <div><i></i><b>Custo e checklist</b><p>Página para calcular o custo por unidade e checklist para conferir cada lote.</p></div>
-    </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="center stack">
-      <span class="eyebrow">Por que um material organizado</span>
-      <h2 class="h2">Receita solta não monta cardápio</h2>
-      <p class="lead">Vídeo de receita tem de monte. O que falta é tudo no mesmo lugar, do jeito que você precisa para produzir e vender.</p>
-    </div>
-    <div class="compare">
-      <div class="col bad">
-        <h3>Receitas soltas na internet</h3>
-        <ul>
-          <li><svg><use href="#i-x"/></svg>Um sabor aqui, outro ali, cada um de um jeito</li>
-          <li><svg><use href="#i-x"/></svg>Sem medida exata nem rendimento</li>
-          <li><svg><use href="#i-x"/></svg>Você descobre o custo depois que já gastou</li>
-          <li><svg><use href="#i-x"/></svg>Nada sobre higiene, conservação e identificação</li>
-        </ul>
-      </div>
-      <div class="col good">
-        <h3>100 Receitas para Vender</h3>
-        <ul>
-          <li><svg><use href="#i-check"/></svg>100 sabores num só lugar, com índice para achar rápido</li>
-          <li><svg><use href="#i-check"/></svg>Todas as receitas no mesmo padrão, fáceis de repetir</li>
-          <li><svg><use href="#i-check"/></svg>Você calcula o custo antes de comprar os ingredientes</li>
-          <li><svg><use href="#i-check"/></svg>Orientações para produzir e vender com segurança</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section style="padding-top:0">
   <div class="wrap">
@@ -417,6 +382,7 @@ footer p + p{margin-top:8px}
         </ol>
       </div>
     </article>
+    <div class="center" style="margin-top:32px"><a class="btn" href="#oferta">Quero as 100 receitas <svg><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
 
@@ -440,9 +406,9 @@ footer p + p{margin-top:8px}
       <div class="price">
         <span class="lbl">Ebook de 106 páginas + 3 bônus, pagamento único de</span>
         <span class="val"><small>R$</small>17,90</span>
-        <span class="once">Acesso imediato. O PDF é seu para sempre.</span>
+        <span class="once">Menos de R$ 0,18 por receita · Pix ou cartão</span><span class="once">Acesso imediato no e-mail. O PDF é seu para sempre.</span>
       </div>
-      <a class="btn js-buy" href="#oferta">Quero as 100 receitas <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn js-buy" href="#oferta">Comprar agora por R$&nbsp;17,90 <svg><use href="#i-arrow"/></svg></a>
       <div class="guar">
         <div class="seal"><div><b>7</b><span>dias</span></div></div>
         <p><strong>Garantia de 7 dias.</strong> Se não for para você, devolvemos 100% do valor. Sem perguntas.</p>
@@ -471,8 +437,8 @@ footer p + p{margin-top:8px}
   <div class="wrap center">
     <h2 class="h2">Daqui a um mês, você quer estar no mesmo lugar?</h2>
     <p class="lead">Escolha seus sabores, faça o primeiro lote e poste a primeira foto ainda esta semana.</p>
-    <a class="btn js-buy" href="#oferta">Quero as 100 receitas por R$ 17,90 <svg><use href="#i-arrow"/></svg></a>
-    <div class="trust"><span><svg width="16" height="16"><use href="#i-lock"/></svg>Compra segura</span><span><svg><use href="#i-check"/></svg>Acesso imediato</span></div>
+    <a class="btn js-buy" href="#oferta">Quero as 100 receitas por R$&nbsp;17,90 <svg><use href="#i-arrow"/></svg></a>
+    <div class="trust"><span><svg width="16" height="16"><use href="#i-lock"/></svg>Compra segura</span><span><svg><use href="#i-check"/></svg>Garantia de 7 dias</span><span><svg><use href="#i-check"/></svg>Acesso imediato</span></div>
   </div>
 </section>
 
@@ -530,6 +496,14 @@ footer p + p{margin-top:8px}
   document.querySelectorAll(".js-buy").forEach(a => a.addEventListener("click", () => {
     if (window.fbq) fbq("track", "InitiateCheckout", {content_name: "100 Receitas para Vender", value: 17.90, currency: "BRL"});
   }));
+  // Barra fixa: aparece depois do topo e some quando a oferta está na tela
+  (() => {
+    const st = document.querySelector(".sticky"), hero = document.querySelector(".hero"), of = document.getElementById("oferta");
+    if (!st) return; let heroOut = false, offerIn = false;
+    const upd = () => st.classList.toggle("on", heroOut && !offerIn);
+    new IntersectionObserver(([e]) => { heroOut = !e.isIntersecting; upd(); }).observe(hero);
+    new IntersectionObserver(([e]) => { offerIn = e.isIntersecting; upd(); }).observe(of);
+  })();
 </script>
 
 </body>
