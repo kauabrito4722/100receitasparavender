@@ -237,6 +237,16 @@ footer p + p{margin-top:8px}
   .gallery img,.gallery video{height:100%;object-fit:cover}
   .dots{display:flex}
 }
+.peek{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 2px 14px;margin-top:24px;-webkit-overflow-scrolling:touch}
+.peek figure{flex:0 0 68%;max-width:300px;margin:0;scroll-snap-align:center;text-align:center}
+.peek img{width:100%;height:auto;border-radius:12px;box-shadow:0 10px 28px rgba(60,20,90,.16);border:1px solid var(--line)}
+.peek figcaption{font-size:.85rem;margin-top:8px;opacity:.75}
+.peek-hint{text-align:center;font-size:.82rem;opacity:.6;margin-top:4px}
+@media(min-width:900px){.peek{justify-content:center;overflow:visible}.peek figure{flex:1 1 0}.peek-hint{display:none}}
+.deps{display:grid;gap:14px;margin-top:24px;grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}
+.deps img{width:100%;height:auto;border-radius:16px;box-shadow:0 8px 22px rgba(0,0,0,.12)}
+@media(min-width:900px){.deps{grid-template-columns:repeat(3,1fr);max-width:none}}
+.contact a{color:inherit;text-decoration:underline}
 </style>
 
 </head>
@@ -355,34 +365,23 @@ footer p + p{margin-top:8px}
 <section style="padding-top:0">
   <div class="wrap">
     <div class="center stack">
-      <span class="eyebrow">Uma página por sabor</span>
-      <h2 class="h2">Veja uma receita por dentro</h2>
+      <span class="eyebrow">Veja por dentro</span>
+      <h2 class="h2">É exatamente isso que você recebe</h2>
+      <p class="lead">Uma página por sabor, com foto, ingredientes, modo de preparo e espaço para anotar o custo.</p>
     </div>
-    <article class="sheet" aria-label="Exemplo de receita do ebook">
-      <div class="tags"><span>Garrafinhas cremosas</span><span>Receita 02 de 50</span></div>
-      <h3>Ninho com Creme de Avelã</h3>
-      <p class="desc">Rende aprox. 4 garrafinhas de 250 a 300&nbsp;ml.</p>
-      <div>
-        <h4>Ingredientes</h4>
-        <ul class="ing2">
-          <li>1 lata de leite condensado (395 g)</li>
-          <li>1 caixa de creme de leite (200 g)</li>
-          <li>600 ml de leite integral gelado</li>
-          <li>5 colheres (sopa) de leite em pó</li>
-          <li>3 colheres (sopa) de creme de avelã</li>
-          <li>1 colher (sopa) de chocolate em pó</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Modo de preparo</h4>
-        <ol>
-          <li>Bata o leite condensado, o creme de leite, o leite e os ingredientes do sabor no liquidificador por 30 a 45 segundos.</li>
-          <li>Faça riscos de creme de avelã nas paredes da garrafinha antes de colocar a mistura.</li>
-          <li>Envase em garrafinhas higienizadas, feche, identifique com sabor e data e mantenha refrigerado a 4&nbsp;°C ou menos.</li>
-        </ol>
-      </div>
-    </article>
-    <div class="center" style="margin-top:32px"><a class="btn" href="#oferta">Quero as 100 receitas <svg><use href="#i-arrow"/></svg></a></div>
+    <div class="peek"><figure><img src="img/ebook-1.jpg" alt="Capa do ebook" width="720" height="1080" loading="lazy" decoding="async"><figcaption>Capa</figcaption></figure><figure><img src="img/ebook-2.jpg" alt="Sumário com os 50 sabores de garrafinha" width="720" height="1080" loading="lazy" decoding="async"><figcaption>Sumário</figcaption></figure><figure><img src="img/ebook-3.jpg" alt="Receita de garrafinha de pistache" width="720" height="1080" loading="lazy" decoding="async"><figcaption>Pistache Cremoso</figcaption></figure><figure><img src="img/ebook-4.jpg" alt="Receita de garrafinha de morango com chocolate" width="720" height="1080" loading="lazy" decoding="async"><figcaption>Morango com Chocolate</figcaption></figure><figure><img src="img/ebook-5.jpg" alt="Receita de geladinho de Ninho com creme de avelã" width="720" height="1080" loading="lazy" decoding="async"><figcaption>Geladinho de Ninho com Avelã</figcaption></figure></div>
+    <p class="peek-hint">Arraste para o lado para ver mais páginas →</p>
+    <div class="center" style="margin-top:28px"><a class="btn" href="#oferta">Quero as 100 receitas <svg><use href="#i-arrow"/></svg></a></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="center stack">
+      <span class="eyebrow">Quem comprou aprovou</span>
+      <h2 class="h2">O que as clientes dizem</h2>
+    </div>
+    <div class="deps"><figure><img src="img/depoimento-1.jpg" alt="Mensagem de WhatsApp da cliente Vera Lucia elogiando o ebook" width="700" height="740" loading="lazy" decoding="async"></figure><figure><img src="img/depoimento-2.jpg" alt="Mensagem de WhatsApp da cliente Ana Clara elogiando o ebook" width="700" height="740" loading="lazy" decoding="async"></figure><figure><img src="img/depoimento-3.jpg" alt="Mensagem de WhatsApp da cliente Juliana Oliveira elogiando o ebook" width="700" height="740" loading="lazy" decoding="async"></figure></div>
   </div>
 </section>
 
@@ -428,6 +427,7 @@ footer p + p{margin-top:8px}
       <details><summary>Quanto posso cobrar?</summary><p>Depende do custo na sua cidade. O ebook traz uma página para calcular o custo por unidade, e com ela você define sua margem de acordo com os preços da sua região.</p></details>
       <details><summary>Como recebo o ebook?</summary><p>Assim que o pagamento é aprovado, o link do PDF chega no seu e-mail. No Pix e no cartão, a aprovação é na hora.</p></details>
       <details><summary>Consigo ler no celular?</summary><p>Sim. O PDF abre no celular, no computador ou no tablet, e você também pode imprimir.</p></details>
+      <details><summary>Ainda tenho dúvidas, com quem falo?</summary><p>Mande um e-mail para <a href="mailto:marianacosta4722@gmail.com">marianacosta4722@gmail.com</a> que a gente responde.</p></details>
       <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Peça o reembolso dentro do prazo e o valor volta inteiro.</p></details>
     </div>
   </div>
@@ -445,6 +445,7 @@ footer p + p{margin-top:8px}
 <footer>
   <div class="wrap">
     <p>100 Receitas para Vender · Garrafinhas cremosas e geladinhos gourmet</p>
+    <p class="contact">Dúvidas? Fale com a gente: <a href="mailto:marianacosta4722@gmail.com">marianacosta4722@gmail.com</a></p>
     <p>Produto digital. Os resultados dependem da sua produção, do seu preço e da sua divulgação.</p>
   </div>
 </footer>
