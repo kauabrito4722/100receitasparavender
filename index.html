@@ -520,6 +520,9 @@ footer p + p{margin-top:8px}
   if (CHECKOUT_URL) {
     document.querySelectorAll(".js-buy").forEach(a => { a.href = CHECKOUT_URL; a.target = "_blank"; a.rel = "noopener"; });
   }
+  document.querySelectorAll(".js-buy").forEach(a => a.addEventListener("click", () => {
+    if (window.fbq) fbq("track", "InitiateCheckout", {content_name: "100 Receitas para Vender", value: 17.90, currency: "BRL"});
+  }));
 </script>
 
 </body>
